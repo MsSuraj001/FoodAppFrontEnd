@@ -153,7 +153,7 @@ function LoginPresentation({ handleFormSubmit, handleUserInput }) {
                                 type="email" 
                                 id="email" 
                                 name="email" 
-                                // onChange={handleUserInput}
+                                onChange={handleUserInput}
                                 required 
                                 placeholder="John@example.com"
                                 className="w-full px-3 py-1 mt-2 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out border border-gray-300 rounded outline-noe focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200" />
@@ -165,7 +165,7 @@ function LoginPresentation({ handleFormSubmit, handleUserInput }) {
                                 type="password" 
                                 id="password" 
                                 name="password" 
-                                // onChange={handleUserInput}
+                                onChange={handleUserInput}
                                 required 
                                 placeholder="Enter your password"
                                 className="w-full px-3 py-1 mt-2 text-base leading-8 text-gray-700 transition-colors duration-200 ease-in-out border border-gray-300 rounded outline-noe focus:border-yellow-500 focus:ring-2 focus:ring-yellow-200" />
@@ -173,7 +173,7 @@ function LoginPresentation({ handleFormSubmit, handleUserInput }) {
 
                         <button 
                             type="submit"
-                            // onClick={handleFormSubmit}
+                            onClick={handleFormSubmit}
                             className="w-full px-8 py-2 text-lg text-white bg-yellow-500 border-0 rounded focus:outline-none hover:bg-yellow-600">
                             Sign In
                         </button>
