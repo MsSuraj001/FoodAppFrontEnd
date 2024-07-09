@@ -2,10 +2,10 @@
 import { Route, Routes } from 'react-router-dom'
 import './App.css'
 import Home from './Pages/Home'
-import SignUp from './Pages/Auth/SignUpPresentations'
+import SignUp from './Pages/Auth/SignUpPresentation'
 import LogIn from './Pages/Auth/LogIn'
 import NotFound from './Pages/NotFoundPage'
-import SignUpPresentation from './Pages/Auth/SignUpPresentations'
+import SignUpPresentation from './Pages/Auth/SignUpPresentation'
 import Denied from './Pages/Denied'
 import AddProduct from './Pages/Admin/AddProduct'
 

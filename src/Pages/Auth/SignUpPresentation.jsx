@@ -1,7 +1,9 @@
-import { Link } from "react-router-dom";
-import toast from "react-hot-toast";
-import { useState } from "react"; 
-function SignUpPresentation({ handleFormSubmit, handleUserInput}) {  //
+import React from 'react'
+import { Link } from 'react-router-dom'
+
+function SignUpPresentation({ handleUserInput, handleFormSubmit}) {
+   // const dispatch = useDispatch()
+    // const navigate = useNavigate()
 
     // const [signUpState, setSignUpState] = useState({
     //     firstName: '',
@@ -20,16 +22,39 @@ function SignUpPresentation({ handleFormSubmit, handleUserInput}) {  //
        
     //  }
 
-    //  function handleFormSubmit(e) {
-    //     e.preventDefault();         // prevent the form from reloading the page
+    //  async function handleFormSubmit(e) {
+    //     e.preventDefault(); // prevent the form from reloading the page
     //     console.log(signUpState);
 
-    //         if(signUpState.firstName.length < 5 || signUpState.firstName.length > 20) {
-    //                     toast.error("First name should be atleast 5 characters long and maximum 20 characters long")
-    //                     return;
-    //                 }
-    //  }
+    //     // Add validations for the form input
+    //     if(!signUpState.email || !signUpState.mobileNumber || !signUpState.password || !signUpState.firstName) {
+    //         alert("Missing values from the form")
+    //         return;
+    //     }
 
+    //     if(signUpState.firstName.length < 5 || signUpState.firstName.length > 20) {
+    //         toast.error("First name should be atleast 5 characters long and maximum 20 characters long")
+    //         return;
+    //     }
+
+    //     // check email
+    //     if(!signUpState.email.includes('@') || !signUpState.email.includes('.')) {
+    //         toast.error("Invalid email address")
+    //         return;
+    //     }
+
+    //     // check mobile number length to be between 10-12
+    //     if(signUpState.mobileNumber.length < 10 || signUpState.mobileNumber.length > 12) {
+    //         toast.error("Mobile number should be between 10-12 characters")
+    //         return;
+    //     }
+
+    //     const apiReponse = await dispatch(createAccount(signUpState));
+    //     console.log("Api response", apiReponse);
+    //     if(apiReponse.payload.data.success) {
+    //         navigate('/auth/login');
+    //     }
+    // }
 
     return (
         <>
@@ -243,7 +268,8 @@ function SignUpPresentation({ handleFormSubmit, handleUserInput}) {  //
             </section>
         </>
     )
-
 }
 
 export default SignUpPresentation;
+
+
