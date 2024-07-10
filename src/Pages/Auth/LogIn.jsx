@@ -2,10 +2,12 @@ import React, { useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { login } from '../../Redux/Slices/AuthSlice';
 import LoginPresentation from './LogInPresentation';
+import { useNavigate } from 'react-router-dom';
 
 function LogIn() {
 
     const dispatch = useDispatch();
+    const navigate = useNavigate();
 
     const [loginData, setloginData] = useState({
         email: '',
@@ -40,9 +42,9 @@ function LogIn() {
 
         const apiReponse = await dispatch(login(loginData));
         console.log("Api response", apiReponse);
-        // if(apiReponse.payload.data.success) {
-        //     navigate('/auth/login');
-        // }
+        if(apiReponse.payload.data.success) {
+            navigate('/');
+        }
 
         
     }
