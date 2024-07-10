@@ -8,8 +8,8 @@ import { useNavigate } from "react-router-dom";
 // Container for the Signup page
 function SignUp() {
     
-    // const dispatch = useDispatch()
-    // const navigate = useNavigate()
+    const dispatch = useDispatch()
+    const navigate = useNavigate()
 
     const [signUpState, setSignUpState] = useState({
         firstName: '',
@@ -62,10 +62,10 @@ function SignUp() {
     }
 
     return (
-       <SignUpPresentation 
-       handleFormSubmit={handleFormSubmit}
-       handleUserInput={handleUserInput}
-       />
+        <SignUpPresentation 
+            handleFormSubmit={handleFormSubmit}
+            handleUserInput={handleUserInput}
+        />
     )
 }
 
