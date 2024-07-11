@@ -8,6 +8,7 @@ import NotFound from './Pages/NotFoundPage'
 import SignUpPresentation from './Pages/Auth/SignUpPresentation'
 import Denied from './Pages/Denied'
 import AddProduct from './Pages/Admin/AddProduct'
+import ProductDetails from './Pages/Products/ProductDetails'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         <Route path='/auth/login' element={ <LogIn /> } />
 
         <Route path='/admin/addProduct' element={<AddProduct />} />
+        <Route path="/product/:productId" element={<ProductDetails />} />
         <Route path='*' element={<NotFound />} />
      </Routes>
     </>

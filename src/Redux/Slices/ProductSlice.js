@@ -22,6 +22,22 @@ export const getAllProducts = createAsyncThunk('/products/getAll', async()=>{
     }
 })
 
+export const getProductsDetails = createAsyncThunk('/products/getDetails', async(id)=>{
+    try {
+        const product = axiosInstansce.get(`/products/${id}`);
+        toast.promise(product, {
+            loading : "loading the product Details",
+            error : "Something went wrong",
+            success : "Product Details are loaded"
+        });
+        const apiResponse = await product;
+        return apiResponse;
+    } catch (error) {
+        console.log(error);
+        toast.error("Something went wrong");
+    }
+})
+
 const productSlice = createSlice({
     name : 'Product',
     initialState,
